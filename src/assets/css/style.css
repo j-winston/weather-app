@@ -1,5 +1,254 @@
-.main-content {
-    height: 100vh;
-    width: 100vw;
-    background-color: whitesmoke;
+:root {
+  --white: 1px solid white;
+  --temp: 2rem;
+  --font-color: white;
 }
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+div {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+
+  background-image: url(/src/assets/images/rainy.jpg);
+  background-size: cover;
+
+  color: var(--font-color);
+}
+
+.header {
+  display: grid;
+  grid-template-areas: "logo search";
+  grid-template-columns: "1fr 3fr";
+
+  justify-items: end;
+
+  padding: 3%;
+}
+
+.logo {
+  grid-area: "logo";
+  align-content: start;
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  padding: 3% 0;
+}
+
+.search {
+  grid-area: "search";
+  max-width: 70%;
+  min-width: 50%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+}
+
+.display-container {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 50%;
+  max-width: 80%;
+
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.location-container {
+  display: flex;
+  font-weight: 800;
+  font-size: 2rem;
+  height: 20%;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.region {
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  width: 50%;
+}
+
+.info-container {
+  display: grid;
+
+  grid-template-areas: "temp feel";
+
+  height: 100%;
+  width: 100%;
+}
+
+.conditions-container {
+  display: none;
+}
+
+.icon {
+  grid-area: "icon";
+
+  align-self: center;
+}
+
+.temp {
+  grid-area: "temp";
+  width: 300px;
+
+  font-size: 6rem;
+  align-self: center;
+
+  border-right: 4px solid white;
+}
+
+.condition-text {
+  font-weight: 600;
+}
+
+.feel {
+  grid-area: "feel";
+
+  display: grid;
+  align-content: center;
+
+  grid-template-areas:
+    "feels-like uv humidity"
+    "feels-like-text uv-text humidity-text";
+
+  grid-template-columns: "1fr 1fr 1fr";
+  grid-template-rows: "1fr 1fr 1fr";
+
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  align-self: center;
+}
+
+.feels-like {
+  grid-area: "feels-like";
+  justify-self: center;
+}
+
+.feels-like-text,
+.uv-text,
+.humidity-text {
+  font-size: 0.9rem;
+  justify-self: center;
+}
+
+.feels-like-text {
+  grid-area: "feels-like-text";
+}
+
+.uv-text {
+  grid-area: "uv-text";
+}
+
+.humidity-text {
+  grid-area: "humidity-text";
+}
+
+.uv {
+  grid-area: "uv";
+  justify-self: center;
+}
+
+.humidity {
+  grid-area: "humidity";
+  justify-self: center;
+}
+
+input {
+  background-color: transparent;
+  outline: 1px solid white;
+  outline-style: 1px solid;
+  border: none;
+  border-radius: 15px;
+  width: 80%;
+  height: 2.5rem;
+  padding-left: 10px;
+  color: white;
+  font-size: 1.4rem;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+/*
+.weather-container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+}
+
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+
+  height: 50%;
+  width: 50%;
+
+  border: 1px solid black;
+  background: darkgray;
+  
+
+}
+.location {
+  display: flex;
+
+  font-size: 1.5rem;
+
+  gap: 3%;
+}
+
+.temp {
+  display: flex;
+  justify-content: flex-end;
+
+  font-size: 5rem;
+}
+
+.feel {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+
+  font-size: 1.2rem;
+}
+*/
