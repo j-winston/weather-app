@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather-app</title>
+  </head>
+  <body background="/src/assets/images/rainy.jpg">
+    <div class="header">
+      <div class="logo"></div>
+      <div class="search">
+        <input
+          type="text"
+          id="js-search-bar"
+          class="search-bar"
+          placeholder="city or zipcode"
+        />
+      </div>
+    </div>
+
+    <div class="js-main-content main-content">
+      <div class="js-display-container display-container">
+        <div class="js-condition-text condition-text">Sunny</div>
+        <div class="location-container">
+          <div class="js-name name">Morrisville</div>
+          <div class="js-region region"></div>
+        </div>
+        <div class="info-container">
+          <div class="js-conditions-container conditions-container">
+            <div class="js-condition-icon condition-icon">
+              <img class="js-icon-img" src="" alt="" />
+            </div>
+          </div>
+          <div class="js-temp temp">101°</div>
+          <div class="js-feel feel">
+            <div class="feels-like-text">Feels like</div>
+            <div class="uv-text">UV Index</div>
+            <div class="humidity-text">Humidity</div>
+            <div class="js-feels-like feels-like">121°</div>
+            <div class="js-uv uv">Very high</div>
+            <div class="js-humidity humidity">70%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
